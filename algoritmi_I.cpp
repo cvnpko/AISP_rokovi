@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <cstdint>
 
 #define MAKS_CENA 1000001
 

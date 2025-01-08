@@ -1,6 +1,7 @@
 #include <iostream>
 #include <deque>
 #include <string>
+#include <cstdint>
 
 typedef std::pair<char, bool> par;
 
@@ -13,7 +14,7 @@ int main()
     std::string s;
     std::cin >> s;
     std::deque<par> d;
-    for (int32_t i = 0; i < s.length(); i++)
+    for (size_t i = 0; i < s.length(); i++)
     {
         if (isupper(s[i]))
         {

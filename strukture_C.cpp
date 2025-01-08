@@ -1,5 +1,6 @@
 #include <iostream>
 #include <queue>
+#include <cstdint>
 
 typedef std::pair<int32_t, int32_t> par;
 

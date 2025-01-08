@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <set>
+#include <cstdint>
 
 int main()
 {
@@ -10,12 +11,12 @@ int main()
 
     int32_t n;
     std::cin >> n;
-    std::vector<u_int32_t> a(n);
+    std::vector<uint32_t> a(n);
     for (int32_t i = 0; i < n; i++)
     {
         std::cin >> a[i];
     }
-    u_int32_t t;
+    uint32_t t;
     std::cin >> t;
     std::set<int32_t> s;
     int32_t ispis = 0;

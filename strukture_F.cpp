@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <cstdint>
 
 typedef std::pair<int32_t, int32_t> par;
 
