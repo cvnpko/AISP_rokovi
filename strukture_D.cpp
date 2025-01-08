@@ -2,6 +2,8 @@
 #include <deque>
 #include <string>
 
+typedef std::pair<char, bool> par;
+
 int main()
 {
     std::cin.tie(nullptr);
@@ -10,10 +12,8 @@ int main()
 
     std::string s;
     std::cin >> s;
-
-    std::deque<std::pair<char, bool>> d;
-
-    for (int i = 0; i < s.length(); i++)
+    std::deque<par> d;
+    for (int32_t i = 0; i < s.length(); i++)
     {
         if (isupper(s[i]))
         {

@@ -8,22 +8,19 @@ int main()
     std::cout.tie(nullptr);
     std::ios::sync_with_stdio(false);
 
-    int n;
+    int32_t n;
     std::cin >> n;
-    std::vector<int> a(n);
-
-    for (int i = 0; i < n; i++)
+    std::vector<int32_t> a(n);
+    for (int32_t i = 0; i < n; i++)
     {
         std::cin >> a[i];
     }
     sort(a.begin(), a.end());
-    int d;
+    int32_t d;
     std::cin >> d;
     d = d * 2 + 1;
-
-    int ispis = 0;
-
-    for (int i = 0, j = 0; j < n;)
+    int32_t ispis = 0;
+    for (int32_t i = 0, j = 0; j < n;)
     {
         if (a[j] - a[i] < d)
         {
@@ -38,7 +35,7 @@ int main()
             i++;
         }
     }
-    std::cout << ispis;
+    std::cout << ispis << '\n';
 
     return 0;
 }

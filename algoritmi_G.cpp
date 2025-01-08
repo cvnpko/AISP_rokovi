@@ -8,19 +8,18 @@ int main()
     std::cout.tie(nullptr);
     std::ios::sync_with_stdio(false);
 
-    int n;
+    int32_t n;
     std::cin >> n;
-    std::vector<unsigned> a(n);
-    for (int i = 0; i < n; i++)
+    std::vector<u_int32_t> a(n);
+    for (int32_t i = 0; i < n; i++)
     {
         std::cin >> a[i];
     }
-    unsigned t;
+    u_int32_t t;
     std::cin >> t;
-    std::set<int> s;
-
-    int ispis = 0;
-    for (int i = 0; i < n; i++)
+    std::set<int32_t> s;
+    int32_t ispis = 0;
+    for (int32_t i = 0; i < n; i++)
     {
         if (s.find(t ^ a[i]) != s.end())
         {
@@ -32,6 +31,7 @@ int main()
             s.insert(a[i]);
         }
     }
-    std::cout << ispis;
+    std::cout << ispis << '\n';
+
     return 0;
 }

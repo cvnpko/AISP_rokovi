@@ -8,19 +8,18 @@ int main()
     std::cout.tie(nullptr);
     std::ios_base::sync_with_stdio(false);
 
-    int n;
+    int32_t n;
     std::cin >> n;
-    std::vector<int> x_osa(n);
-    for (int i = 0; i < n; i++)
+    std::vector<int32_t> x_osa(n);
+    for (int32_t i = 0; i < n; i++)
     {
         std::cin >> x_osa[i];
     }
     sort(x_osa.begin(), x_osa.end());
-    int d;
+    int32_t d;
     std::cin >> d;
-
-    int ispis = 0;
-    for (int i = 0, j = 0; j < n;)
+    int32_t ispis = 0;
+    for (int32_t i = 0, j = 0; j < n;)
     {
         if (x_osa[j] - x_osa[i] <= d)
         {
@@ -35,6 +34,7 @@ int main()
             i++;
         }
     }
-    std::cout << ispis;
+    std::cout << ispis << '\n';
+
     return 0;
 }

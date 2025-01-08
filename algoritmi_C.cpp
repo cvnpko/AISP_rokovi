@@ -8,32 +8,27 @@ int main()
     std::cout.tie(nullptr);
     std::ios_base::sync_with_stdio(false);
 
-    int n;
+    int32_t n;
     std::cin >> n;
-    std::vector<int> a(n);
+    std::vector<int32_t> a(n);
     std::vector<int64_t> prefiksna(n);
-
-    for (int i = 0; i < n; i++)
+    for (int32_t i = 0; i < n; i++)
     {
         std::cin >> a[i];
     }
     sort(a.begin(), a.end());
-
     prefiksna[0] = a[0];
-
-    for (int i = 1; i < n; i++)
+    for (int32_t i = 1; i < n; i++)
     {
         prefiksna[i] = a[i] + prefiksna[i - 1];
     }
-
-    int q;
+    int32_t q;
     std::cin >> q;
-
-    for (int i = 0; i < q; i++)
+    for (int32_t i = 0; i < q; i++)
     {
-        int x;
+        int32_t x;
         std::cin >> x;
-        int j = std::upper_bound(a.begin(), a.end(), x) - a.begin() - 1;
+        int32_t j = std::upper_bound(a.begin(), a.end(), x) - a.begin() - 1;
         if (j == -1)
         {
             std::cout << 0 << '\n';

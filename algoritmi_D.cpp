@@ -7,19 +7,17 @@ int main()
     std::cout.tie(nullptr);
     std::ios::sync_with_stdio(false);
 
-    int n;
+    int32_t n;
     std::cin >> n;
-    std::vector<int> a(n);
-    for (int i = 0; i < n; i++)
+    std::vector<int32_t> a(n);
+    for (int32_t i = 0; i < n; i++)
     {
         std::cin >> a[i];
     }
-    int t;
+    int32_t t;
     std::cin >> t;
-
-    int brojac = 0, tmp = 0;
-
-    for (int i = 0, j = 0; j < n;)
+    int32_t brojac = 0, tmp = 0;
+    for (int32_t i = 0, j = 0; j < n;)
     {
         brojac -= (j - i + 1) * (j - i) / 2;
         while (j < n && tmp + a[j] < t)
@@ -42,8 +40,7 @@ int main()
             j++;
         }
     }
-
-    std::cout << brojac;
+    std::cout << brojac << '\n';
 
     return 0;
 }

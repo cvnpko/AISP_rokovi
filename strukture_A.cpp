@@ -7,20 +7,20 @@ int main()
     std::cout.tie(nullptr);
     std::ios_base::sync_with_stdio(false);
 
-    int k, n;
+    int32_t k, n;
     std::cin >> k >> n;
-    std::priority_queue<int> pq;
-    std::vector<int> izlaz(n, 0);
-    for (int i = 0; i < k && i < n; i++)
+    std::priority_queue<int32_t> pq;
+    std::vector<int32_t> izlaz(n, 0);
+    for (int32_t i = 0; i < k && i < n; i++)
     {
-        int tmp;
+        int32_t tmp;
         std::cin >> tmp;
         pq.push(tmp);
         std::cout << "0 ";
     }
-    for (int i = k; i < n; i++)
+    for (int32_t i = k; i < n; i++)
     {
-        int tmp;
+        int32_t tmp;
         std::cin >> tmp;
         if (tmp > pq.top())
         {
@@ -33,6 +33,7 @@ int main()
             std::cout << "0 ";
         }
     }
+    std::cout << '\n';
 
     return 0;
 }

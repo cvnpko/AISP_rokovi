@@ -4,7 +4,7 @@
 struct struktura
 {
 public:
-    long long l, r, d;
+    int32_t l, r, d;
 };
 
 int main()
@@ -13,24 +13,23 @@ int main()
     std::cout.tie(nullptr);
     std::ios::sync_with_stdio(false);
 
-    long long t, n;
+    int64_t t;
+    int32_t n;
     std::cin >> t >> n;
-
-    long long m_min = 0, m_max = 0;
+    int32_t m_min = 0, m_max = 0;
     std::vector<struktura> a(n);
-    for (long long i = 0; i < n; i++)
+    for (int64_t i = 0; i < n; i++)
     {
         std::cin >> a[i].l >> a[i].r >> a[i].d;
         m_min = std::min(m_min, a[i].l);
         m_max = std::max(m_max, a[i].r);
     }
-    long long ispis = 0;
-
+    int64_t ispis = 0;
     while (m_min <= m_max)
     {
-        long long m_s = m_max - (m_max - m_min) / 2;
-        long long r = 0;
-        for (long long i = 0; i < n; i++)
+        int32_t m_s = m_max - (m_max - m_min) / 2;
+        int64_t r = 0;
+        for (int64_t i = 0; i < n; i++)
         {
             if (m_s < a[i].r)
             {
@@ -47,7 +46,7 @@ int main()
             m_min = m_s + 1;
         }
     }
-    std::cout << m_min << ' ' << ispis;
+    std::cout << m_min << ' ' << ispis << '\n';
 
     return 0;
 }

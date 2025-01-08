@@ -4,7 +4,7 @@
 
 bool check(char a, char b)
 {
-    return a == 'U' && b == 'D' || a == 'D' && b == 'U' || a == 'L' && b == 'R' || a == 'R' && b == 'L';
+    return (a == 'U' && b == 'D') || (a == 'D' && b == 'U') || (a == 'L' && b == 'R') || (a == 'R' && b == 'L');
 }
 
 int main()
@@ -16,7 +16,7 @@ int main()
     std::string s;
     std::cin >> s;
     std::deque<char> d;
-    for (int i = 0; i < s.length(); i++)
+    for (int32_t i = 0; i < s.length(); i++)
     {
         if (d.empty())
         {
@@ -31,12 +31,12 @@ int main()
             d.push_back(s[i]);
         }
     }
-
     while (!d.empty())
     {
         std::cout << d.front();
         d.pop_front();
     }
+    std::cout << '\n';
 
     return 0;
 }
